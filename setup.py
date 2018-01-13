@@ -5,12 +5,12 @@ from setuptools import setup, find_packages
 #
 entry_points = """
 [ginga.rv.plugins]
-myglobalplugin=plugins:setup_myglobalplugin
-mylocalplugin=plugins:setup_mylocalplugin
+myglobalplugin=mygingaplugins:setup_myglobalplugin
+mylocalplugin=mygingaplugins:setup_mylocalplugin
 """
 
 setup(
-    name = 'MyGingaPlugins',
+    name = 'mygingaplugins',
     version = "0.1.dev",
     description = "Plugin examples for the Ginga reference viewer",
     author = "Tycho Brahe",

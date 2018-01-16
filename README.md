@@ -55,7 +55,7 @@ Curves=rgbtools_plugins:setup_Curves
 """
 
 setup(
-    name = rgbtools,
+    name = 'rgbtools',
     ...
 )
 ```

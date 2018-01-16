@@ -57,16 +57,16 @@ import os.path
 # my plugins are available here
 p_path = os.path.split(__file__)[0]
 
-def setup_myglobalplugin():
-    spec = Bunch(path=os.path.join(p_path, 'MyGlobalPlugin.py'),
-                 module='MyGlobalPlugin', klass='MyGlobalPlugin',
+def setup_MyGlobalPlugin():
+    spec = Bunch(path=os.path.join(p_path, 'myglobalplugin.py'),
+                 module='myglobalplugin', klass='MyGlobalPlugin',
                  ptype='global', workspace='right', start=False,
                  category="Analysis", menu="My Global", tab='My Global')
     return spec
 
-def setup_mylocalplugin():
-    spec = Bunch(path=os.path.join(p_path, 'MyLocalPlugin.py'),
-                 module='MyLocalPlugin', klass='MyLocalPlugin',
+def setup_MyLocalPlugin():
+    spec = Bunch(path=os.path.join(p_path, 'mylocalplugin.py'),
+                 module='mylocalplugin', klass='MyLocalPlugin',
                  ptype='local', workspace='dialogs',
                  category="Analysis", menu="My Local", tab='My Local')
     return spec

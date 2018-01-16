@@ -1,7 +1,11 @@
 """
 Skeleton example of a Ginga local plugin called 'MyLocalPlugin'
 
-To enable it, run ginga with the command
+If you register this plugin using the setup.py script it will be
+picked up in the reference viewer. If you want to test it without
+registering it, put it somewhere in your PYTHONPATH and run the
+reference viewer with this option:
+
     $ ginga --plugins=MyLocalPlugin
 
 it will then be available from the "Operations" button.

@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 #
 entry_points = """
 [ginga.rv.plugins]
-myglobalplugin=mygingaplugins:setup_myglobalplugin
-mylocalplugin=mygingaplugins:setup_mylocalplugin
+MyGlobalPlugin = template_plugins:setup_MyGlobalPlugin
+MyLocalPlugin = template_plugins:setup_MyLocalPlugin
 """
 
 setup(

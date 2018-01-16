@@ -23,19 +23,22 @@ You will want to do something like the following steps:
 $ git clone https://github.com/ejeschke/ginga-plugin-template.git rgbtools
 ```
 
-3. Change the name of the directory "mygingaplugins" to reflect the name
+3. Change the name of the directory "template_plugins" to reflect the name
    of your separately distributed package. Use a different name than the
    module or class name(s) of the plugin(s).  In our example case, we'll
    use "rgbtools_plugins":
 
 ```bash
 $ cd rgbtools
-$ git mv mygingaplugins rgbtools_plugins
+$ git mv template_plugins rgbtools_plugins
 ```
 
 4. Decide on the names of your plugins.  In our example, suppose we want
-   one plugin named "whitebalance" and one named "curves".  (You can have
-   as many plugins as you want in one package).
+   one plugin named "WhiteBalance" and one named "Curves".  (You can have
+   as many plugins as you want in one package).  We will follow the standard
+   Python convention of using lower case module names and camel-case class
+   names.  In addition, you can specify different names for the menu to
+   invoke the plugin and the tab that is shown when the plugin is activated.
 
 5. Edit setup.py
 
@@ -57,24 +60,24 @@ setup(
 )
 ```
 
-6. Copy and modify one of the two files in the <mynewname_plugin> directory.
+6. Copy and modify one or more of the two files in the newly renamed 
+   "rgbtools_plugins" directory.
 
    If you are making a global type plugin (the most general) you would
-   want to start with "MyGlobalPlugin.py".  If a local plugin (see the
-   link above for a description of the difference) use "MyLocalPlugin.py"
+   want to start with "myglobalplugin.py".  If a local plugin (see the
+   link above for a description of the difference) use "mylocalplugin.py"
    Rename and modify accordingly.  Let's suppose our two plugins will be
    of the global type, so we'll rename one example, make a copy for the
    other, and delete the local plugin example:
 
 ```bash
 $ cd rgbtools_plugins
-# rename one
-$ mv MyGlobalPlugin.py whitebalance.py
+# copy the ones we want
+$ cp myglobalplugin.py whitebalance.py
+$ cp myglobalplugin.py curves.py
 
-# make a copy for the other
-$ cp whitebalance.py curves.py
-
-# don't forget later to git rm the older example plugins
+# don't forget later to git add your new plugins and to git rm the older
+ example plugins
 ```
 
 7. Edit whitebalance.py and curves.py
@@ -83,7 +86,8 @@ $ cp whitebalance.py curves.py
    You'll want to edit the class names to reflect the change.  E.g.
    from "MyGlobalPlugin" to "WhiteBalance".  There are two places that
    are most important for the rename: in the class initializer (class name
-   and superclass initializer call) and in the __str__ method at the end.
+   and superclass initializer call) and in the __str__ method at the end,
+   which should be a lower case spelling of the class name.
 
 8. Edit rgbtools_plugins/__init__.py
 

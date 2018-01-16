@@ -38,7 +38,8 @@ $ git mv template_plugins rgbtools_plugins
    as many plugins as you want in one package).  We will follow the standard
    Python convention of using lower case module names and camel-case class
    names.  In addition, you can specify different names for the menu to
-   invoke the plugin and the tab that is shown when the plugin is activated.
+   invoke the plugin and the tab that is shown when the plugin is activated,
+   so keep that in mind when thinking of names.
 
 5. Edit setup.py
 
@@ -65,18 +66,18 @@ setup(
 
    If you are making a global type plugin (the most general) you would
    want to start with "myglobalplugin.py".  If a local plugin (see the
-   link above for a description of the difference) use "mylocalplugin.py"
-   Rename and modify accordingly.  Let's suppose our two plugins will be
-   of the global type, so we'll rename one example, make a copy for the
-   other, and delete the local plugin example:
+   link above for a description of the difference) use "mylocalplugin.py".
+   Copy and modify accordingly.  Let's suppose our two plugins will be
+   of the global type, so we'll make two copies for our own plugins:
 
 ```bash
 $ cd rgbtools_plugins
+
 # copy the ones we want
 $ cp myglobalplugin.py whitebalance.py
 $ cp myglobalplugin.py curves.py
 
-# don't forget later to git add your new plugins and to git rm the older
+# don't forget later to "git add" your new plugins and to "git rm" the older
  example plugins
 ```
 

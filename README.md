@@ -116,7 +116,7 @@ def setup_Curves():
 ```
 
 9. Once you think you have the plugin(s) created correctly, install it using
-   the usual python setup.py installation method.  Then run the program
+   the usual "pip install ." installation method.  Then run the program
    "util/test_registration.py" to see whether your plugins will be seen by
    Ginga.  You should see a separate line for all separately distributable
    plugins:

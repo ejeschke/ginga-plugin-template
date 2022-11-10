@@ -11,13 +11,13 @@ MyLocalPlugin = template_plugins:setup_MyLocalPlugin
 
 setup(
     name = 'mygingaplugins',
-    version = "0.1.dev",
+    version = "0.2.dev",
     description = "Plugin examples for the Ginga reference viewer",
     author = "Tycho Brahe",
     license = "BSD",
     # change this to your URL
     url = "http://ejeschke.github.com/ginga-plugin-template",
-    install_requires = ["ginga>=2.6.1"],
+    install_requires = ["ginga>=3.4.1"],
     packages = find_packages(),
     include_package_data = True,
     package_data = {},
